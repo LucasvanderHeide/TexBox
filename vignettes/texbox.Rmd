@@ -1,0 +1,113 @@
+
+---
+title: "A Quickstart with TexBox"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{A Quickstart with TexBox}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(TexBox)
+```
+
+# Introduction
+
+TexBox is an R package that provides useful
+functions for working with text.
+
+The package contains four functions that help
+users count words, count sentences, clean text
+and create summaries of text.
+
+This vignette explains how to use these functions.
+
+# 1. Count words
+
+The `word_count()` function counts the number
+of words in a text.
+
+For example:
+
+```{r}
+word_count("Hello world!")
+```
+
+You can also provide multiple texts:
+
+```{r}
+word_count(c("Hello world", "Welcome to TexBox"))
+```
+
+# 2. Count sentences
+
+The `sentence_count()` function counts the number
+of sentences in a text.
+
+Sentences are separated by periods,
+exclamation marks or question marks.
+
+For example:
+
+```{r}
+sentence_count("Hello! How are you? I am fine.")
+```
+
+# 3. Clean text
+
+The `clean_text()` function removes unnecessary
+whitespace.
+
+It removes spaces at the beginning and end of text
+and replaces multiple spaces, tabs and line breaks
+with a single space.
+
+For example:
+
+```{r}
+clean_text("  Hello    world!  ")
+```
+
+# 4. Summarise text
+
+The `text_summary()` function combines several
+text statistics into one overview.
+
+It calculates:
+
+- The number of characters
+- The number of words
+- The number of sentences
+
+For example:
+
+```{r}
+text_summary("Hello world!")
+```
+
+You can also analyse multiple texts at once:
+
+```{r}
+text_summary(c(
+  "Hello world!",
+  "Welcome to TexBox. This is a text toolbox."
+))
+```
+
+# Conclusion
+
+TexBox provides four simple functions for working
+with text in R.
+
+The functions can be used separately or together
+to analyse and clean text.
+
+We hope TexBox makes working with text easier!

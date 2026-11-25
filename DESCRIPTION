@@ -1,0 +1,16 @@
+Package: TexBox
+Title: A Toolbox of Text Utilities
+Version: 0.0.0.9000
+Authors@R: 
+    person("Lucas", "van der Heide", email = "277501587+LucasvanderHeide@users.noreply.github.com", role = c("aut", "cre"))
+Description: Provides useful functions for working with text.
+    The package includes tools for cleaning, counting and
+    summarising text.
+License: MIT + file LICENSE
+Config/roxygen2/version: 8.1.1
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
